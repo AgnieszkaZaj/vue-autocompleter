@@ -1,6 +1,6 @@
 Vue.component("v-autocompleter", {
     template:`<div>
-    <input type="szukaj" maxlength="2048" title="Szukaj" v-on:click="set()" @keyup.up="next(activeResult - 1)" @keyup.down="next(activeResult + 1)" @keyup.enter="change(value)" :value="value"
+    <input class="ramka" type="szukaj" maxlength="2048" title="Szukaj" v-on:click="set()" @keyup.up="next(activeResult - 1)" @keyup.down="next(activeResult + 1)" @keyup.enter="change(value)" :value="value"
     @input="$emit('input', $event.target.value)"> 
     <div class="top10">
         <div id="autocomp" :class="[ value.length != 0 && filteredCities.length != 0 && kontrol == 1 ? 'autocompleter' : 'nic']">
